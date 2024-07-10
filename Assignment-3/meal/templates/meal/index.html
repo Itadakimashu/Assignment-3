@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title%}Homepage{% endblock title %}
+{% block content%}
+<div class="container">
+    <div class=" row text-center" style="margin-top: 100px; font-size: 20px;">
+        <p class="col-6">Welcome to our resturant, where every meal is a masterpiece and each moment is a celebration of flavor. Step into an ambiance that exudes warmth and sophistication, setting the stage for unforgettable dining experiences. Our chefs, driven by a passion for perfection, meticulously curate a menu that blends local, seasonal ingredients with creative flair. From the first bite to the last, savor the artistry of our dishes, each crafted to delight the senses and redefine your expectations. Join us in creating moments of culinary bliss, where every visit is an exploration of extraordinary flavors and exceptional hospitality.</p>
+        <img src="{% static 'images/resturant.jpg' %}" class="col-6" alt="resturant">
+    </div>
+</div>
+{% endblock content %}

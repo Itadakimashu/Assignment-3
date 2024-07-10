@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Hobbies</title>
+</head>
+<body>
+
+    <h1>Welcome to Our School</h1>
+    <h2>Today's Date: {{ current_date|date:"l, F d, Y" }}</h2>
+    
+    <ul>
+        <li>
+            Hobbies of {{ students.1.name }}: {{ students.1.hobbies|join:", "|default:"No hobbies listed" }}
+        </li>
+        <li>
+            ID of {{ students.2.name }} is 3 more than {{ students.2.id|add:"3" }}
+        </li>
+        <li>
+            Capitalized name: {{ students.4.name|capfirst }}
+        </li>
+        <li>
+            Hobbies of {{ students.3.name }}: {{ students.3.hobbies|join:", "|cut:" " }}
+        </li>
+        <li>
+            First hobby of {{ students.5.name }}: {{ students.5.hobbies|first }}
+        </li>
+        <li>
+            Total hobbies of {{ students.0.name }}: {{ students.0.hobbies|length }}
+        </li>
+        <li>
+            Random student: {{ students|random }}
+        </li>
+        <li>
+            Hobbies of {{ students.4.name }} (first two words): {{ students.4.hobbies|join:" "|truncatewords:2 }}...
+        </li>
+    </ul>
+
+</body>
+</html>
